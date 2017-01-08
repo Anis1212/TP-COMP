@@ -17,8 +17,8 @@
 * synt.h
 * C header file generated from synt.y.
 * 
-* Date: 12/25/16
-* Time: 21:09:26
+* Date: 01/04/17
+* Time: 10:55:27
 * 
 * AYACC Version: 2.07
 ****************************************************************************/
@@ -42,4 +42,21 @@
 #define ne 268
 #define lt 269
 #define gt 270
+#ifndef YYSTYPE
+union tagYYSTYPE {
+#line 33 ".\\synt.y"
+
+   char *op;
+        char *source1;
+        char *source2;
+        char *dest;
+
+#line 55 "synt.h"
+};
+
+#define YYSTYPE union tagYYSTYPE
+#endif
+
+extern YYSTYPE YYNEAR yylval;
+
 #endif

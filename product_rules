@@ -1,0 +1,83 @@
+Function : Type identifier '(' ArgList ')' CompoundStmt
+         ;
+
+ArgList : Arg
+        | ArgList ',' Arg
+        ;
+
+Arg : Type identifier
+    ;
+
+Declaration  : Type IdentList ';'
+	;
+
+Type : INT
+     | FLOAT
+     ;
+
+IdentList : identifier ',' IdentList
+          | identifier
+          ;
+
+Stmt : ForStmt
+      | WhileStmt
+      | Expr ';'
+      | IfStmt
+      | CompoundStmt
+      | Declaration
+      | ';'
+      ;
+
+ForStmt :  FOR '(' Expr ';' OptExpr ';' OptExpr  ')' Stmt
+	;
+OptExpr  : Expr
+          |
+          ;
+
+WhileStmt : WHILE '(' Expr  ')' Stmt
+          ;
+
+IfStmt : IF '(' Expr ')' Stmt %prec then
+       | IF '(' Expr ')' Stmt ELSE Stmt
+       ;
+
+
+CompoundStmt : '{' StmtList  '}'
+             ;
+
+StmtList : StmtList Stmt
+         |
+         ;
+
+Expr : identifier '=' Expr
+     | Rvalue
+     ;
+
+Rvalue : Rvalue Compare Mag
+       | Mag
+       ;
+
+Compare : eq
+        | lt
+        | gt
+        | le
+        | ge
+        | ne
+        ;
+
+Mag : Mag '+' Term
+    | Mag '-' Term
+    | Term
+    ;
+
+Term : Term '*' Factor
+     | Term '/' Factor
+     | Factor
+     ;
+
+Factor : '(' Expr ')'
+       | '-' Factor
+       | '+' Factor
+       | identifier
+       | number
+       ;

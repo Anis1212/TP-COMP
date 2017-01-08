@@ -4,6 +4,8 @@ void yyerror(const char * msg);
 #include "synt.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
+extern YYSTYPE yylval;
 %}
 alpha [a-zA-Z]
 digit [0-9]

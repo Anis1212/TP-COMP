@@ -17,8 +17,8 @@
 * lex.c
 * C source file generated from lex.l.
 * 
-* Date: 12/25/16
-* Time: 20:56:25
+* Date: 01/08/17
+* Time: 07:13:22
 * 
 * ALex Version: 2.07
 ****************************************************************************/
@@ -42,8 +42,10 @@ void yyerror(const char * msg);
 #include "synt.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
+extern YYSTYPE yylval;
 
-#line 47 "lex.c"
+#line 49 "lex.c"
 /* repeated because of possible precompiled header */
 #include <yylex.h>
 
@@ -162,135 +164,135 @@ int action;
 	switch (action) {
 	case 1:
 		{
-#line 11 ".\\lex.l"
+#line 13 ".\\lex.l"
 ;
-#line 168 "lex.c"
+#line 170 "lex.c"
 		}
 		break;
 	case 2:
 		{
-#line 12 ".\\lex.l"
+#line 14 ".\\lex.l"
  numligne = numligne + 1; 
-#line 175 "lex.c"
+#line 177 "lex.c"
 		}
 		break;
 	case 3:
 		{
-#line 13 ".\\lex.l"
+#line 15 ".\\lex.l"
 return INT;
-#line 182 "lex.c"
+#line 184 "lex.c"
 		}
 		break;
 	case 4:
 		{
-#line 14 ".\\lex.l"
+#line 16 ".\\lex.l"
 return FLOAT;
-#line 189 "lex.c"
+#line 191 "lex.c"
 		}
 		break;
 	case 5:
 		{
-#line 15 ".\\lex.l"
+#line 17 ".\\lex.l"
 return FOR;
-#line 196 "lex.c"
+#line 198 "lex.c"
 		}
 		break;
 	case 6:
 		{
-#line 16 ".\\lex.l"
+#line 18 ".\\lex.l"
 return WHILE;
-#line 203 "lex.c"
+#line 205 "lex.c"
 		}
 		break;
 	case 7:
 		{
-#line 17 ".\\lex.l"
+#line 19 ".\\lex.l"
 return IF;
-#line 210 "lex.c"
+#line 212 "lex.c"
 		}
 		break;
 	case 8:
 		{
-#line 18 ".\\lex.l"
+#line 20 ".\\lex.l"
 return ELSE;
-#line 217 "lex.c"
+#line 219 "lex.c"
 		}
 		break;
 	case 9:
 		{
-#line 19 ".\\lex.l"
+#line 21 ".\\lex.l"
 return number;
-#line 224 "lex.c"
+#line 226 "lex.c"
 		}
 		break;
 	case 10:
 		{
-#line 20 ".\\lex.l"
+#line 22 ".\\lex.l"
 return identifier;
-#line 231 "lex.c"
+#line 233 "lex.c"
 		}
 		break;
 	case 11:
 		{
-#line 21 ".\\lex.l"
+#line 23 ".\\lex.l"
 return le;
-#line 238 "lex.c"
+#line 240 "lex.c"
 		}
 		break;
 	case 12:
 		{
-#line 22 ".\\lex.l"
+#line 24 ".\\lex.l"
 return ge;
-#line 245 "lex.c"
+#line 247 "lex.c"
 		}
 		break;
 	case 13:
 		{
-#line 23 ".\\lex.l"
+#line 25 ".\\lex.l"
 return eq;
-#line 252 "lex.c"
+#line 254 "lex.c"
 		}
 		break;
 	case 14:
 		{
-#line 24 ".\\lex.l"
+#line 26 ".\\lex.l"
 return ne;
-#line 259 "lex.c"
+#line 261 "lex.c"
 		}
 		break;
 	case 15:
 		{
-#line 25 ".\\lex.l"
+#line 27 ".\\lex.l"
 return gt;
-#line 266 "lex.c"
+#line 268 "lex.c"
 		}
 		break;
 	case 16:
 		{
-#line 26 ".\\lex.l"
+#line 28 ".\\lex.l"
 return lt;
-#line 273 "lex.c"
+#line 275 "lex.c"
 		}
 		break;
 	case 17:
 		{
-#line 27 ".\\lex.l"
+#line 29 ".\\lex.l"
 ;
-#line 280 "lex.c"
+#line 282 "lex.c"
 		}
 		break;
 	case 18:
 		{
-#line 28 ".\\lex.l"
+#line 30 ".\\lex.l"
 ;
-#line 287 "lex.c"
+#line 289 "lex.c"
 		}
 		break;
 	case 19:
 		{
-#line 29 ".\\lex.l"
+#line 31 ".\\lex.l"
 return yytext[0];
-#line 294 "lex.c"
+#line 296 "lex.c"
 		}
 		break;
 	default:
@@ -571,6 +573,6 @@ YYCONST yybackup_t YYNEARFAR YYBASED_CODE YYDCDECL yybackup[] = {
 	0
 };
 
-#line 30 ".\\lex.l"
+#line 32 ".\\lex.l"
 
 
